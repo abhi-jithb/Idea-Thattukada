@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      width: 400px;
+      min-height: 300px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 20px;
+    }
+    
+    .container {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    h1 {
+      color: #0f0f0bc9;
+      font-size: 24px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .input-section {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    #ideaInput {
+      flex: 1;
+      padding: 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+    
+    #ideaInput:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+    
+    #addBtn {
+      padding: 12px 24px;
+      background: #008000;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    
+    #addBtn:hover {
+      background: #019c01dc;
+    }
+    
+    #ideaList {
+      max-height: 300px;
+      overflow-y: auto;
+      margin-bottom: 15px;
+    }
+    
+    .idea-item {
+      background: #f8f9fa;
+      padding: 12px 12px 12px 35px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: transform 0.2s;
+      position: relative;
+    }
+    
+    .idea-item::before {
+      content: "☕";
+      position: absolute;
+      left: 8px;
+      top: 12px;
+      font-size: 18px;
+      color: #0d0d0eb7;
+      font-weight: bold;
+    }
+    
+    .idea-item:hover {
+      transform: translateX(5px);
+      background: #e9ecef;
+    }
+    
+    .idea-text {
+      flex: 1;
+      color: #333;
+      word-break: break-word;
+    }
+    
+    .idea-date {
+      font-size: 11px;
+      color: #999;
+      margin-top: 4px;
+    }
+    
+    .delete-btn {
+      background: #000000da;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+      margin-left: 10px;
+      transition: background 0.3s;
+    }
+    
+    .delete-btn:hover {
+      background: #ee5a6f;
+    }
+    
+    .action-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .export-btn, .clear-btn {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    
+    .export-btn {
+      background: #26de81;
+      color: white;
+    }
+    
+    .export-btn:hover {
+      background: #20bf6b;
+    }
+    
+    .clear-btn {
+      background: #fed330;
+      color: #333;
+    }
+    
+    .clear-btn:hover {
+      background: #f7b731;
+    }
+    
+    .empty-state {
+      text-align: center;
+      color: #999;
+      padding: 40px 20px;
+      font-style: italic;
+    }
+    
+    .count {
+      text-align: center;
+      color: #667eea;
+      font-size: 12px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+  </style>
+  <title>Idea തട്ടുകട ✍🏻💡</title>
+</head>
+<body>
+  <div class="container">
+    <h1> Idea തട്ടുകട ✍🏻💡</h1>
+    
+    <div class="input-section">
+      <input type="text" id="ideaInput" placeholder="What's your next big idea?" />
+      <button id="addBtn">Add</button>
+    </div>
+    
+    <div class="count" id="ideaCount">0 ideas stored</div>
+    
+    <div id="ideaList"></div>
+    
+    <div class="action-buttons">
+      <button class="export-btn" id="exportBtn">📥 Export</button>
+      <button class="clear-btn" id="clearBtn">🗑️ Clear All</button>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

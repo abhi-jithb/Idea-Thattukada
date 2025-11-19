@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Arivu Thattukada",
+  "version": "1.0",
+  "description": "Capture your project ideas before they vanish!",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+I",
+        "mac": "Command+I"
+      },
+      "description": "Open Arivu Thattukada to capture ideas quickly"
+    }
+  }
+}
