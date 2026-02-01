@@ -17,6 +17,9 @@ This extension is my solution - and a learning project to understand Chrome exte
 - **🔒 Privacy-First**: All data stored locally on your device - nothing leaves your computer
 - **• Bullet List Format**: Ideas displayed in clean dot-list format
 
+- 
+<img width="386" height="454" alt="Screenshot From 2026-02-01 19-12-01" src="https://github.com/user-attachments/assets/80ca38c7-78ca-4e25-bd22-ffedba8ea0e1" />
+
 ## 🚀 Installation
 
 ### Option 1: Load Unpacked (For Development/Testing)
